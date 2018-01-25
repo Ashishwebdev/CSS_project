@@ -1,0 +1,62 @@
+body{
+    background: blueviolet;
+}
+
+.container{
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    filter: url('#speffect');
+}
+
+.container .circle{
+    background: white;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    border-radius: 50%;
+    margin: auto;
+    left: -9999px;
+    right: -9999px;
+    top: -9999px;
+    bottom: -9999px;
+   animation: anim 3s infinite ease-in-out  ;
+}
+.container >div .circle:last-child{
+    animation-delay: -1.5s;
+}
+
+.container >div:last-child{
+    transform: rotate(90deg);
+}
+
+.container >div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+}
+@keyframes anim {
+    0%
+      {transform-origin: 50% -100%;
+       transform: rotate(0deg);
+    }
+
+    50%
+        {transform-origin: 50% -100%;
+        transform: rotate(360deg);
+    }
+
+    50.001%{
+        transform-origin: 50% 200%;
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform-origin: 50% 200%;
+        transform: rotate(360deg);
+    }
+}

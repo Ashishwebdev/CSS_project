@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loading animation</title>
+    <link rel="stylesheet" type="text/css" href="loading_circle.css">
+    <meta name="viewport" content="width=device-width"/>
+</head>
+<body>
+    <div class="container">
+        <div class="first-set">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+
+        <div class="second-set">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+<svg>
+    <defs>
+        <filter id="speffect">
+            <feGaussianBlur stdDeviation="10" in="sourceGraphic" result="blur" result="speffect">
+            </feGaussianBlur>
+            <feColorMatrix mode="matrix" in="blur" values="1 0 0 0 0   0 1 0 0 0   0 0 1 0 0   0 0 0 18  -8"></feColorMatrix>
+            <feBlend in="blur" in2="speffect" ></feBlend>
+        </filter>
+    </defs>
+
+</svg>
+</body>
+</html>
