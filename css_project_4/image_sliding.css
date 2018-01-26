@@ -1,0 +1,85 @@
+.slide-container{
+    width: 560px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+
+.slider{
+    width: 450px;
+    height: 350px;
+    border: 1px solid #ddd;
+    margin-top:10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    overflow: hidden;
+}
+
+.slider .thumbs{
+    position: relative;
+    height: 450px;
+    width: 1950px;
+    transition: transform 2s
+}
+
+.slider .thumbs div {
+    width: 380px;
+    height: 330px;
+    box-shadow:  0 0 4px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    border-radius: 3px;
+    float: left;
+    position: relative;
+    transition: all 2s;
+}
+
+.thumbs .first {
+    background-image: url(https://static.pexels.com/photos/19090/pexels-photo.jpg);
+    background-size: cover;
+    background-position: 50% 50% ;
+}
+
+.thumbs .second {
+    background-image: url(http://www.runnersworld.com/sites/runnersworld.com/files/styles/slideshow-desktop/public/nb1500_womenl_2220.jpg?itok=_lSBqbF0);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.thumbs .third {
+    background-image: url(http://bpc.h-cdn.co/assets/16/11/980x490/landscape-1458242073-new-nike-hyperadapt-shoes.jpg);
+    background-size: cover;
+    background-position: 50% 50% ;
+}
+.slider .thumbs.move .first,
+.slider .thumbs.move .second,
+.slider .thumbs.move .third {
+    background-position: 20% 50% !important;
+}
+
+.next, .prev {
+    background-color: #888888;
+    top: 50%;
+    position: absolute;
+    border-radius: 50%;
+    border: none;
+    width: 50px;
+    height: 50px;
+    left: 0;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.next:hover, .prev:hover{
+    background-color: #333;
+}
+
+.next {
+    left: calc(100% - 40px);
+}
