@@ -1,0 +1,63 @@
+body {
+    background: blueviolet;
+}
+.container {
+    width: 70px;
+    height:70px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% -50%);
+}
+
+.container .box {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 3px;
+    position: absolute;
+    margin: auto;
+    left: -9999px;
+    right: -9999px;
+    top: -9999px;
+    bottom: -9999px;
+    animation: walk 0.5s cubic-bezier(0.7, 0, 0.3, 1 ) infinite;
+}
+.walkaway, .walkaway:before, .walkaway:after {
+    width:6px;
+    height:6px;
+    border-radius: 1px;
+    background-color: #fff;
+    position:absolute;
+    top: 62px;
+    left: 52px;
+}
+.walkaway:before{
+    content: "";
+    top: 0;
+    left: -40px;
+}
+.walkaway:after{
+    content: "";
+    top: 0;
+    left: 40px;
+}
+.walkaway{
+animation: walkaway 0.5s cubic-bezier(0.7, 0, 0.3, 1 ) infinite;
+}
+
+@keyframes walkaway {
+    to {
+        transform: translate(-40px);
+    }
+}
+@keyframes walk {
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+@media(max-width: 720px){
+    
+}
