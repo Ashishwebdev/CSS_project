@@ -1,0 +1,25 @@
+body{
+    padding: 50px;
+}
+
+.trigger {
+    display: inline-block;
+    background: #555555;
+    width: 200px;
+    height:200px;
+    border: 20px solid #999;
+}
+
+.box{
+    display: inline-block;
+    background: pink;
+    width: 200px;
+    height: 200px;
+    transition: transform 300ms ease-in-out;
+    pointer-events: none;
+}
+
+.trigger.clicked .box {
+    transform: translate(200px,140px) rotate(20deg);
+}
+
