@@ -8,3 +8,5 @@ Earth is revolving around the sun
 Images slider, easy to implement
 # css_project_5
 Cool loading box animation
+# css_project_6
+Learning new animation and transition with javascript
